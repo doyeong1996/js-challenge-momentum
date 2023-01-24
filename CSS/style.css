@@ -1,0 +1,222 @@
+body {
+  background-color: black;
+  padding: 10px;
+  font-family: "Kavoon", cursive;
+  padding: 20px;
+  height: 95vh;
+}
+
+.main {
+  display: flex;
+  color: white;
+  height: 95vh;
+}
+
+.hidden {
+  display: none;
+}
+
+#quote-author {
+  margin-bottom: 10px;
+}
+
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.header-columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.header_clock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 60px;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+.header-title img {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.header-title img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #940094, 0 0 10px 5px rgba(255, 46, 203, 0.993);
+}
+
+.header_day input {
+  border: none;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.06);
+  font-family: "Kavoon", cursive;
+}
+
+.header_weather {
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  color: white;
+}
+
+.content_todo {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 20%;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 10px 5px rgba(252, 249, 249, 0.993);
+  margin-top: 20px;
+  padding: 20px 20px;
+}
+.content_todo span {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+.content_todo ul {
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.content_todo ul span {
+  margin: 10px;
+  margin-right: 20px;
+}
+.content_todo ul li {
+  margin-bottom: 10px;
+}
+.content_todo ul button {
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: white;
+  box-shadow: 0 0 0 1px #ffffff, 0 0 10px 1px rgba(252, 249, 249, 0.993);
+}
+.content_todo ul button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 128, 43, 0.993);
+}
+
+.content_todo input {
+  color: white;
+  width: 45%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 10px 5px rgba(252, 249, 249, 0.993);
+}
+.content_todo input::-moz-placeholder {
+  color: gray;
+}
+.content_todo input:-ms-input-placeholder {
+  color: gray;
+}
+.content_todo input::placeholder {
+  color: gray;
+}
+
+.footer {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 30px;
+  margin-left: 25%;
+}
+
+.footer_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.footer-login__column h1 {
+  font-size: 50px;
+  margin-bottom: 0px;
+}
+
+#footer-login__form input {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 30px 5px rgba(252, 249, 249, 0.993);
+}
+#footer-login__form input::-moz-placeholder {
+  color: white;
+}
+#footer-login__form input:-ms-input-placeholder {
+  color: white;
+}
+#footer-login__form input::placeholder {
+  color: white;
+}
+
+#footer-login__form button {
+  margin-left: 10px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 1px #ffffff, 0 0 30px 5px rgba(252, 249, 249, 0.993);
+  cursor: pointer;
+}
+#footer-login__form button:hover {
+  background-color: white;
+  color: black;
+}
+
+#footer_useravatar img {
+  border: 1px solid rgb(238, 119, 8);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-top: 30px;
+  -webkit-animation: bounce 3.5s infinite linear;
+          animation: bounce 3.5s infinite linear;
+  box-shadow: 0 0 0 1px #ff6f10, 0 0 10px 5px rgba(255, 128, 43, 0.993);
+}
+
+#quote-author {
+  font-size: 20px;
+  margin-top: 60px;
+}/*# sourceMappingURL=style.css.map */
