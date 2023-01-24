@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="shortcut icon"
+      size="16x16 32x32 64x64"
+      href="img/shortcut.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <main class="main_screen">
+      <!-- header 시간 + 날씨 + 날짜 -->
+      <div class="header">
+        <div class="header__column">
+          <div class="header-title">
+            <img src="img/icon.jpg" />
+            <span>Welcome</span>
+          </div>
+        </div>
+        <div class="header__column">
+          <div class="header-columns">
+            <div class="header_clock">
+              <div id="clock">00:00:00</div>
+              <div class="header_day">
+                <input type="date" id="today" />
+              </div>
+            </div>
+            <div class="header_weather">
+              <div id="weather">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 콘텐츠 TODOLIST -->
+      <div class="content">
+        <div class="content_todo">
+          <form id="todo-form">
+            <input required type="text" placeholder="Todo List Enter" />
+            <span>TODO LIST</span>
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+      <!-- footer 로그인유저 아바타 + 명언 -->
+      <div class="footer">
+        <div class="footer_login">
+          <div class="footer-login__column">
+            <form id="footer-login__form" class="hidden">
+              <input
+                required
+                maxlength="15"
+                type="text"
+                placeholder="Username"
+              />
+              <button>Log In</button>
+            </form>
+            <h1 id="greething" class="hidden"></h1>
+          </div>
+          <div class="footer-login__column">
+            <div id="footer_useravatar" class="hidden">
+              <img src="img/3.jpg" />
+            </div>
+          </div>
+        </div>
+        <div id="quote-author">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </main>
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quote.js"></script>
+  </body>
+</html>
