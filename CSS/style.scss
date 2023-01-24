@@ -51,7 +51,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 60px;
   img {
     border: 1px solid black;
     border-radius: 50%;
@@ -67,6 +67,7 @@ body {
 }
 
 .header_day input {
+  display: flex;
   border: none;
   color: white;
   font-size: 30px;
@@ -88,7 +89,7 @@ body {
 .content_todo {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 600px;
   width: 20%;
   border: 1px solid white;
   border-radius: 5px;
@@ -99,6 +100,10 @@ body {
     font-size: 25px;
     margin-left: 30px;
   }
+}
+#todo-form {
+  display: flex;
+  align-items: center;
 }
 .content_todo ul {
   overflow-y: auto;
@@ -143,20 +148,18 @@ body {
 
 .footer {
   display: flex;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 30px;
-  margin-left: 25%;
+  margin-top: 40px;
 }
 .footer_login {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 200px;
 }
 .footer-login__column h1 {
   //유저 닉네임

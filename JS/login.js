@@ -2,6 +2,7 @@ const loginForm = document.querySelector("#footer-login__form");
 const loginInput = document.querySelector("#footer-login__form input");
 const greething = document.querySelector("h1#greething");
 const userAvarta = document.querySelector("#footer_useravatar");
+const headerTitle = document.querySelector(".header-title");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -19,6 +20,7 @@ function paintGreething(username) {
   userAvarta.classList.remove(HIDDEN_CLASSNAME);
   greething.innerText = `${username}`;
   greething.classList.add("animated", "rubberBand");
+  headerTitle.classList.add("animated", "fadeInRight");
 }
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
