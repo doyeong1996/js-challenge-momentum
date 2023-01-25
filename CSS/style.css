@@ -81,6 +81,21 @@ body {
   font-size: 30px;
 }
 
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout-button button {
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+}
+.logout-button img {
+  display: flex;
+  justify-content: center;
+}
+
 .content {
   display: flex;
   width: 100%;
@@ -102,6 +117,7 @@ body {
 .content_todo span {
   font-size: 25px;
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 .content_todo ul {
@@ -147,6 +163,12 @@ body {
 }
 .content_todo input::placeholder {
   color: gray;
+}
+
+#todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .footer {
@@ -215,9 +237,14 @@ body {
   -webkit-animation: bounce 3.5s infinite linear;
           animation: bounce 3.5s infinite linear;
   box-shadow: 0 0 0 1px #ff6f10, 0 0 10px 5px rgba(255, 128, 43, 0.993);
+  transition: all 1s;
 }
 
 #quote-author {
   font-size: 20px;
   margin-top: 60px;
+  cursor: pointer;
+}
+#quote-author:hover {
+  color: #ff6f10;
 }/*# sourceMappingURL=style.css.map */
