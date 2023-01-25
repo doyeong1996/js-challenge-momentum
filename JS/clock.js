@@ -5,9 +5,14 @@ const day = document.querySelector("#day");
 function onToday() {
   const date = new Date();
   const year = date.getFullYear();
-  const month = date.getMonth() + 1; // 0~11까지만 표시가된다 그래서 + 1 을 따로해준다.
-  const days = date.getDate();
-
+  let month = date.getMonth() + 1; // 0~11까지만 표시가된다 그래서 + 1 을 따로해준다.
+  let days = date.getDate();
+  if (month < 10) {
+    month = String(date.getMonth() + 1).padStart(2, "0"); // 1~9 월까지는 앞에 0을 추가한다.
+  }
+  if (days < 10) {
+    days = String(date.getDate()).padStart(2, "0"); // 1~9 일까지는 앞에 0을 추가한다.
+  }
   day.innerText = `${year}-${month}-${days}`;
 }
 
