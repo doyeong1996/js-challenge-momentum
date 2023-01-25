@@ -120,6 +120,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 30px;
 
   span {
     margin: 10px;
@@ -156,7 +157,6 @@ body {
 #todo-form {
   display: flex;
   align-items: center;
-  justify-content: end;
 }
 
 //footer
