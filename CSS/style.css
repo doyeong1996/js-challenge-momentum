@@ -96,6 +96,10 @@ body {
   justify-content: center;
 }
 
+#day {
+  font-size: 35px;
+}
+
 .content {
   display: flex;
   width: 100%;
