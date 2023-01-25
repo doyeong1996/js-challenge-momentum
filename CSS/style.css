@@ -239,7 +239,7 @@ body {
   height: 90px;
   margin-top: 30px;
   -webkit-animation: bounce 3.5s infinite linear;
-          animation: bounce 3.5s infinite linear;
+  animation: bounce 3.5s infinite linear;
   box-shadow: 0 0 0 1px #ff6f10, 0 0 10px 5px rgba(255, 128, 43, 0.993);
   transition: all 1s;
 }
@@ -251,4 +251,4 @@ body {
 }
 #quote-author:hover {
   color: #ff6f10;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
