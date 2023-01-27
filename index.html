@@ -20,7 +20,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     />
-    <title>TodoList</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title class="animate__bounce">TodoList</title>
   </head>
   <body>
     <main class="main_screen">
@@ -28,7 +32,11 @@
       <div class="header">
         <div class="header__column">
           <div class="header-title">
-            <img src="img/icon.jpg" />
+            <form class="logout-button">
+              <button>
+                <img src="img/icon.jpg" />
+              </button>
+            </form>
             <span>welcome</span>
           </div>
         </div>
@@ -37,7 +45,7 @@
             <div class="header_clock">
               <div id="clock">00:00:00</div>
               <div class="header_day">
-                <input type="date" id="today" />
+                <div id="day"></div>
               </div>
             </div>
             <div class="header_weather">
@@ -53,6 +61,24 @@
 
       <!-- 콘텐츠 TODOLIST -->
       <div class="content">
+        <div class="content_menu">
+          <div class="content_menu_title">
+            <span>Menu</span>
+            <a class="menu-trigger" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+          <div id="content_menu_list" class="hidden">
+            <div>TODO LIST</div>
+            <div>TIME</div>
+            <div>USER NAME</div>
+            <div>WELCOME</div>
+            <div>TODAY</div>
+            <div>WEATHER</div>
+          </div>
+        </div>
         <div class="content_todo">
           <form id="todo-form">
             <input required type="text" placeholder="Todo List Enter" />
@@ -94,5 +120,6 @@
     <script src="JS/weather.js"></script>
     <script src="JS/todo.js"></script>
     <script src="JS/quote.js"></script>
+    <script src="JS/menu.js"></script>
   </body>
 </html>

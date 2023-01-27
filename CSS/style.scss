@@ -1,14 +1,14 @@
 body {
   background-color: black;
-  padding: 10px;
+  padding: 0px;
+  margin: 0px;
   font-family: "Kavoon", cursive;
-  padding: 20px;
-  height: 95vh;
+  height: 100%;
 }
-.main {
-  display: flex;
+.main_screen {
   color: white;
-  height: 95vh;
+  height: 100%;
+  padding: 20px 30px;
 }
 .hidden {
   display: none;
@@ -21,11 +21,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
-
 // header 시간, 날씨, TODOLIST
 
 .header {
@@ -77,13 +76,29 @@ body {
 .header_weather {
   font-size: 30px;
 }
-
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+  }
+  img {
+    display: flex;
+    justify-content: center;
+  }
+}
+#day {
+  font-size: 35px;
+}
 //content - todo list
 
 .content {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
   color: white;
 }
 .content_todo {
@@ -99,6 +114,7 @@ body {
   span {
     font-size: 25px;
     margin-left: 30px;
+    margin-right: 30px;
   }
 }
 #todo-form {
@@ -110,6 +126,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-left: 30px;
 
   span {
     margin: 10px;
@@ -143,17 +160,110 @@ body {
     color: gray;
   }
 }
+#todo-form {
+  display: flex;
+  align-items: center;
+}
+.content_menu {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+}
+.content_menu_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  span {
+    font-size: 40px;
+  }
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 45px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 75%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* 2th bar 사라지고,  1st 3rd bar 회전하며 X  */
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  transform: translateY(10px) rotate(-50deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  transform: translateY(-10px) rotate(50deg);
+}
+
+#content_menu_list {
+  font-size: 20px;
+  animation: listOpenAnimation 1.5s ease-in-out forwards;
+  div {
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      color: #ff6f10;
+    }
+  }
+}
+
+@keyframes listOpenAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 //footer
 
 .footer {
   display: flex;
-  width: 100%;
+  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 40px;
+  margin-top: 45px;
+  margin-left: 25%;
+  margin-right: 25%;
 }
 .footer_login {
   display: flex;
@@ -166,6 +276,7 @@ body {
   font-size: 50px;
   margin-bottom: 0px;
 }
+
 #footer-login__form input {
   color: white;
   border: none;
@@ -199,8 +310,13 @@ body {
   margin-top: 30px;
   animation: bounce 3.5s infinite linear;
   box-shadow: 0 0 0 1px #ff6f10, 0 0 10px 5px rgba(255, 128, 43, 0.993);
+  transition: all 1s;
 }
 #quote-author {
   font-size: 20px;
   margin-top: 60px;
+  cursor: pointer;
+  &:hover {
+    color: #ff6f10;
+  }
 }
