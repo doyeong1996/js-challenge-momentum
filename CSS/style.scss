@@ -1,14 +1,14 @@
 body {
   background-color: black;
-  padding: 10px;
+  padding: 0px;
+  margin: 0px;
   font-family: "Kavoon", cursive;
-  padding: 20px;
-  height: 95vh;
+  height: 100%;
 }
-.main {
-  display: flex;
+.main_screen {
   color: white;
-  height: 95vh;
+  height: 100%;
+  padding: 20px 30px;
 }
 .hidden {
   display: none;
@@ -22,7 +22,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
 }
 // header 시간, 날씨, TODOLIST
@@ -98,7 +98,7 @@ body {
 .content {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
   color: white;
 }
 .content_todo {
@@ -159,6 +159,93 @@ body {
 #todo-form {
   display: flex;
   align-items: center;
+}
+.content_menu {
+  width: 20%;
+  height: 20%;
+  display: flex;
+  padding-top: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
+}
+.content_menu_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  span {
+    font-size: 40px;
+  }
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 45px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 75%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* 2th bar 사라지고,  1st 3rd bar 회전하며 X  */
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  transform: translateY(10px) rotate(-50deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  transform: translateY(-10px) rotate(50deg);
+}
+
+#content_menu_list {
+  font-size: 20px;
+  animation: listOpenAnimation 1.5s ease-in-out forwards;
+  div {
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      color: #ff6f10;
+    }
+  }
+}
+
+@keyframes listOpenAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 //footer
