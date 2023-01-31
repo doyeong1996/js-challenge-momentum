@@ -255,12 +255,13 @@ body {
 
 //content - game
 .content-game {
-  display: flex;
+  //display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 25%;
   transition: all 1.4s;
+  animation: gameResultAnimation 1.4s ease-in-out forwards;
 }
 .content-game__header {
   margin-bottom: 7px;
@@ -293,11 +294,9 @@ body {
   margin-top: 13px;
   margin-bottom: 5px;
   font-size: 22px;
-  animation: gameResultAnimation 1.4s ease-in-out forwards;
 }
 .content-game__result {
   font-size: 40px;
-  animation: gameResultAnimation 1.4s ease-in-out forwards;
 }
 @keyframes gameResultAnimation {
   from {
