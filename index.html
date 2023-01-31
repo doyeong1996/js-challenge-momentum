@@ -70,15 +70,36 @@
               <span></span>
             </a>
           </div>
-          <div id="content_menu_list" class="hidden">
-            <div>TODO LIST</div>
-            <div>TIME</div>
-            <div>USER NAME</div>
-            <div>WELCOME</div>
-            <div>TODAY</div>
-            <div>WEATHER</div>
+          <ul id="content_menu_list" class="hidden">
+            <li>TODO LIST</li>
+            <li>TIME</li>
+            <li>USER NAME</li>
+            <li>WELCOME</li>
+            <li>TODAY</li>
+            <li>WEATHER</li>
+            <li>NEW GAME🎮</li>
+          </ul>
+        </div>
+
+        <div class="content-game">
+          <h1>Random Game🎮</h1>
+          <div class="content-game__header">
+            <span>Generate a number between 0 end</span>
+            <input type="number" min="0" max="50" required />
+          </div>
+
+          <div class="content-game__form">
+            <span>Guess the Number : </span>
+            <input type="number" min="0" max="50" required />
+            <button>PLAY🎮</button>
+            <span></span>
+          </div>
+
+          <div class="content-game__result">
+            <span></span>
           </div>
         </div>
+
         <div class="content_todo">
           <form id="todo-form">
             <input required type="text" placeholder="Todo List Enter" />
@@ -121,5 +142,6 @@
     <script src="JS/todo.js"></script>
     <script src="JS/quote.js"></script>
     <script src="JS/menu.js"></script>
+    <script src="JS/game.js"></script>
   </body>
 </html>
